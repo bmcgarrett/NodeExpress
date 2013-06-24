@@ -10,3 +10,4 @@ exports.index = function(req, res){
 exports.mytest = function(req, res){
     res.render('mytest', { title: 'This is my test page' });
 };
+
