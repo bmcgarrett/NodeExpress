@@ -2,8 +2,31 @@ doctype 5
 html
   head
     title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
   body
     block content
-    p(id='firstParagraph') This is my paragraph
-    span My New span
+        #container.headingTop.text-center
+            h1 Node Express Testing
+            p.lead Node Express Testing Application
+        #container.navbar
+            #container.navbar-inner
+                a.brand Node Express
+                ul.nav
+                    li.active
+                        a(href="/") Home
+                    li
+                        a(href="/User List") Users
+                    li
+                        a(href="/SQL") Mongo
+
+
+
+
+
+
+
+
