@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d446882f-2289-449b-8f1d-de9056ea9060" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
     </list>
     <ignored path="NodeExpress.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/layout.jade" changelist="d446882f-2289-449b-8f1d-de9056ea9060" time="1372726842048" ignored="false" />
+    <file path="/layout.jade" changelist="d446882f-2289-449b-8f1d-de9056ea9060" time="1372726900543" ignored="false" />
     <file path="/style.css" changelist="d446882f-2289-449b-8f1d-de9056ea9060" time="1372726023948" ignored="false" />
     <file path="/index.jade" changelist="d446882f-2289-449b-8f1d-de9056ea9060" time="1371735592573" ignored="false" />
     <file path="/dummy.txt" changelist="d446882f-2289-449b-8f1d-de9056ea9060" time="1372092806401" ignored="false" />
@@ -58,7 +56,7 @@
       <file leaf-file-name="layout.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="50" selection-start="792" selection-end="792" vertical-scroll-proportion="0.52871287">
+            <state line="23" column="38" selection-start="854" selection-end="854" vertical-scroll-proportion="0.5960396">
               <folding />
             </state>
           </provider>
@@ -486,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="50" selection-start="792" selection-end="792" vertical-scroll-proportion="0.52871287">
+        <state line="23" column="38" selection-start="854" selection-end="854" vertical-scroll-proportion="0.5960396">
           <folding />
         </state>
       </provider>
