@@ -7,6 +7,7 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/javascripts/NodeExpressApp.js')
   body
     block content
         #container.headingTop.text-center
@@ -16,12 +17,12 @@ html
             #container.navbar-inner
                 a.brand Node Express
                 ul.nav
-                    li.active
+                    li
                         a(href="/") Home
                     li
-                        a(href="/User List") Users
+                        a(href="/users") Users
                     li
-                        a(href="/SQL") Mongo
+                        a(href="/mongo") Mongo
 
 
 
