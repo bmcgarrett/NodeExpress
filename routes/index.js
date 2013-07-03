@@ -4,9 +4,9 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'My Node Page' });
+  res.render('index', { title: 'Node Express App Home' });
 };
 
 exports.mongoTest = function(req, res){
-    res.render('mongo', { title: 'Mongo'});
+  res.render('mongo', { title: 'MongoDB',subHeading: 'Mongo'});
 }
