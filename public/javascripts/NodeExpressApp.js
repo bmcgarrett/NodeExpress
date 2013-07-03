@@ -7,4 +7,13 @@
  */
 $(document).ready(function () {
     $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+
+    $('#addUsrSave').click(function () {
+        var userNameToSave = $('#addUsrModalInput').val();
+        var mongo = require('mongoskin');
+        mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').save({"username":userNameToSave}).(function(err, success){
+            if (err) throw err;
+            $(location).attr('href',"/mongo");
+        });
+    });
 });
