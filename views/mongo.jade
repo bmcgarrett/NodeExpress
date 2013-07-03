@@ -2,5 +2,27 @@ extends layout
 
 block subContent
     #container.mongoDBInfo
-        h1 Database Info
+        h1#dbHeader Database Info
+        #container.mongoUserInfo
+            table#mongoUserTable.table.table-striped
+                thead
+                    tr
+                        th #
+                        th User Name
+                tbody
+                    each user, i in currentUsers
+                        tr
+                            td #{i}
+                            td #{user.username}
+
+
+
+
+
+
+
+
+
+
+
 
