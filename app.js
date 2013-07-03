@@ -31,6 +31,15 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/mongo',routes.mongoTest);
 
+app.post('/mongo', function(req,res) {
+    var userNameToAdd = req.body.username;
+    var mongo = require('mongoskin');
+    mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').insert({username:userNameToAdd},function(err, result){
+        if (err) throw err;
+        res.redirect('/mongo');
+    });
+})
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
