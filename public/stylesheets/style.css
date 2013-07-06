@@ -7,5 +7,15 @@
 }
 
 #crud {
+    padding-right: 10px;
     padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+#delCol {
+    width: 5px;
+}
+
+#colHeading {
+    font-size: 16pt;
 }

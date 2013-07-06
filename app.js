@@ -32,13 +32,38 @@ app.get('/users', user.list);
 app.get('/mongo',routes.mongoTest);
 
 app.post('/mongo', function(req,res) {
-    var userNameToAdd = req.body.username;
     var mongo = require('mongoskin');
-    mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').insert({username:userNameToAdd},function(err, result){
+    if (req.body.username)
+    {
+        var userNameToAdd = req.body.username;
+        mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').insert({username:userNameToAdd},function(err, result){
+            if (err) throw err;
+            res.redirect('/mongo');
+        });
+    }
+});
+
+app.get('/mongo/del', function(req,res) {
+    var mongo = require('mongoskin');
+    var userNameToDelete = req.query.userToDelete;
+    var userNameSubString = userNameToDelete.substr(1);
+    mongo.db('localhost:27017/myusert', {safe: false}).collection('myusers').remove({username:userNameSubString},function(err,result){
         if (err) throw err;
         res.redirect('/mongo');
     });
-})
+
+});
+
+app.get('/mongo/update', function(req,res) {
+    var mongo = require('mongoskin');
+    var userNameToUpdate = req.query.userToUpdateOld;
+    var userNameToUpdateNew = req.query.userToUpdateNew;
+    console.log(userNameToUpdate + " " + userNameToUpdateNew);
+    mongo.db('localhost:27017/myusert', {safe: false}).collection('myusers').update({username:userNameToUpdate},{ $set:{username:userNameToUpdateNew} }, false, true,function(err,result){
+        if (err) throw err;
+        res.redirect('/mongo');
+    });
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

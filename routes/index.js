@@ -10,7 +10,7 @@ exports.index = function(req, res){
 
 exports.mongoTest = function(req, res){
   var mongo = require('mongoskin');
-  mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').find().toArray(function(err, result){
+  mongo.db('localhost:27017/myusert', {safe: true}).collection('myusers').find().sort({ _id : 1 }).toArray(function(err, result){
         if (err) throw err;
         res.render('mongo', { title: 'MongoDB',subHeading: 'Mongo',currentUsers: result });
     });

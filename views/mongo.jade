@@ -6,18 +6,23 @@ block subContent
         #container.mongoUserInfo
             table#mongoUserTable.table.table-striped
                 thead
-                    tr
-                        th #
+                    tr#colHeading
+                        th#delCol Delete
+                        th User #
                         th User Name
+                        th Edit
                 tbody
                     each user, i in currentUsers
-                        tr
-                            td #{i}
-                            td #{user.username}
+                        tr(id="#{i}")
+                            td
+                                i.icon-remove.icon-white.delUser
+                            td.userIDField  #{i}
+                            td.userNameField  #{user.username}
+                            td
+                                button#editUsrButton.btn.btn-primary(href="#editUsrModal",role="button",data-toggle="modal") Edit
+
     #container#crud
         a.btn.crudBtn(href="#addUsrModal",role="button",data-toggle="modal") Add User
-
-
 
     #contain#addUsrModal.modal.hide.fade(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         #container.modal-header
@@ -31,8 +36,16 @@ block subContent
             button.btn(data-dismiss="modal",aria-hidden="true") Close
             button#addUsrSave.btn.btn-primary Save Changes
 
-
-
+    #contain#editUsrModal.modal.hide.fade(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+            #container.modal-header
+                button.close(type="button",class="close",data-dismiss="modal",aria-hidden="true") x
+                h3#myModalLabel Edit User
+            #container.modal-body
+                p User Name
+                input#editUserInput
+            #container.modal-footer
+                button.btn(data-dismiss="modal",aria-hidden="true") Close
+                button#editUsrSave.btn.btn-primary Save Changes
 
 
 
