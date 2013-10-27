@@ -7,8 +7,9 @@ block subContent
             table#mongoUserTable.table.table-striped
                 thead
                     tr#colHeading
-                        th#delCol Delete
-                        th User #
+                        th#delColHeading Delete
+                        th#userIDHeading User #
+                        th#mongoIDHeading Mongo ID
                         th User Name
                         th Edit
                 tbody
@@ -17,6 +18,7 @@ block subContent
                             td
                                 i.icon-remove.icon-white.delUser
                             td.userIDField  #{i}
+                            td.mongoIDField #{user._id}
                             td.userNameField  #{user.username}
                             td
                                 button#editUsrButton.btn.btn-primary(href="#editUsrModal",role="button",data-toggle="modal") Edit
